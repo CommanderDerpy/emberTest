@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Update 
   config.vm.provision "shell", inline: "sudo yum update -y"
   # Get Node
-  config.vm.provision "shell", inline: "sudo yum install -y gcc-c++ make git"
+  config.vm.provision "shell", inline: "sudo yum install -y gcc-c++ make"
   config.vm.provision "shell", inline: "curl -sl https://rpm.nodesource.com/setup_6.x | sudo -E bash -"
   config.vm.provision "shell", inline: "sudo yum install -y nodejs"
   # Install ember
@@ -34,6 +34,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Set up project folder
   config.vm.synced_folder ".", "/home/vagrant/dev", type: "nfs", create: "true"
+
+  # Set up APi end point
+  config.vm.provision "shell", inline: "mkdir /home/vagrant/apiend"
+  config.vm.provision "shell", inline: "cd /home/vagrant/apiend"
+  config.vm.provision "shell", inline: "npm i knex mysql express body-parser --save"
+  config.vm.provision "shell", inline: "sudo npm i knex -g"
+  config.vm.provision "shell", inline: "printf \"node_modules\n.DS_Store\" > .gitignore"
 
   # config.vm.provision "shell", inline: "sudo yum update -y"
 
