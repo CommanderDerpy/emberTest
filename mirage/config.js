@@ -213,6 +213,11 @@ export default function() {
         return i.attributes.name.toLowerCase().indexOf(request.queryParams.name.toLowerCase()) !== -1;
       });
       return { data: filteredPlayers };
+    } else if (request.queryParams.id !== undefined) {
+      let filteredPlayers = players.filter(function(i) {
+        return i.id == request.queryParams.id;
+      });
+      return { data: filteredPlayers };
     } else {
       return { data: players };
     }
