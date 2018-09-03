@@ -1,192 +1,188 @@
 export default function() {
   this.namespace = '/api';
 
-  this.get('/players', function() {
-    return {
-      data: [{
+  let players = [{
         type: 'player',
         id: 1,
         attributes: {
-          identifier: 1,
           name: 'Max',
           accountuid: 'stuff',
           money: 123,
           damage: 'stuff',
           hunger: 'stuff',
-          thirst: 'stuff'
+          thirst: 'stuff',
+          lastUpdated: "1st June 2018"
+        }
+    },{
+      type: 'player',
+      id: 2,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+      }
+    },{
+      type: 'player',
+      id: 3,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
         }
       },{
-        type: 'player',
-        id: 2,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
+      type: 'player',
+      id: 4,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
         }
       },{
-        type: 'player',
-        id: 3,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 4,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 5,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 6,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 7,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 8,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 9,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 10,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 11,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 12,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 13,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 14,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
-          }
-        },{
-        type: 'player',
-        id: 15,
-        attributes: {
-          identifier: 2,
-          name: 'Max',
-          accountuid: 'stuff',
-          money: 123,
-          damage: 'stuff',
-          hunger: 'stuff',
-          thirst: 'stuff'
+      type: 'player',
+      id: 5,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
         }
-      }]
-    };
-  });
-}
+      },{
+      type: 'player',
+      id: 6,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 7,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 8,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 9,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 10,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 11,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 12,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 13,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 14,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+        }
+      },{
+      type: 'player',
+      id: 15,
+      attributes: {
+        name: 'Max',
+        accountuid: 'stuff',
+        money: 123,
+        damage: 'stuff',
+        hunger: 'stuff',
+        thirst: 'stuff',
+        lastUpdated: "1st June 2018"
+      }
+    }];
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
@@ -210,3 +206,15 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
+
+  this.get('/players', function(db, request) {
+    if(request.queryParams.name !== undefined) {
+      let filteredPlayers = players.filter(function(i) {
+        return i.attributes.name.toLowerCase().indexOf(request.queryParams.name.toLowerCase()) !== -1;
+      });
+      return { data: filteredPlayers };
+    } else {
+      return { data: players };
+    }
+  });
+}

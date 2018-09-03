@@ -1,4 +1,12 @@
 <h2>List of players</h2>
-{{#each model as |players|}}
+{{!-- {{#each model as |players|}}
 	{{player-list player=players}}
-{{/each}}
+{{/each}} --}}
+
+{{#player-filter filter=(action 'filterByName') as |filteredResults|}}
+<ul class="results">
+	{{#each filteredResults as |players|}}
+		<li>{{player-list player=players}}</li>
+	{{/each}}
+</ul>
+{{/player-filter}}
