@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 	actions: {
-		filterByName(param) {
+		filterByNameAndId(param) {
 			if (param != '') {
 				// debugger;
 				if (parseInt(param)) {
