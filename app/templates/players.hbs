@@ -2,11 +2,38 @@
 {{!-- {{#each model as |players|}}
 	{{player-list player=players}}
 {{/each}} --}}
-
 {{#player-filter filter=(action 'filterByNameAndId') as |filteredResults|}}
-<ul class="results">
-	{{#each filteredResults as |players|}}
-		<li>{{player-list player=players}}</li>
-	{{/each}}
-</ul>
+<table class="table table-dark">
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Account UID</th>
+			<th scope="col">PopTabs</th>
+			<th scope="col">Damage</th>
+			<th scope="col">Hunger</th>
+			<th scope="col">Thirst</th>
+			<th scope="col">Last Connected</th>
+			<th scope="col">Kick</th>
+			<th scope="col">Ban</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each filteredResults as |player|}}
+		{{!-- Not using a component because components are wrapped in divs and that breaks Bootstrap --}}
+			<tr>
+				<td>{{empty-check player.id}}</td>
+				<td>{{empty-check player.name}}</td>
+				<td>{{empty-check player.account_uid}}</td>
+				<td>{{empty-check (poptab-formatter player.money)}}</td>
+				<td>{{empty-check player.damage}}</td>
+				<td>{{empty-check player.hunger}}</td>
+				<td>{{empty-check player.thirst}}</td>
+				<td>{{empty-check player.last_Updated}}</td>
+				<td><button type="button" class="btn btn-warning">Kick</button></td>
+				<td><button type="button" class="btn btn-danger">Ban</button></td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
 {{/player-filter}}

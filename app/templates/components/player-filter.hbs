@@ -1,2 +1,9 @@
-{{input value=value key-up=(action 'handleFilterEntry' placeholder="Filter by Name or ID")}}
-{{yield results}}
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Search: </span>
+  </div>
+  {{input value=value class="form-control" key-up=(action 'handleFilterEntry' placeholder="Filter by Name or ID")}}
+</div>
+
+	{{yield results}}
+

@@ -5,7 +5,7 @@ export default function() {
         type: 'player',
         id: 1,
         attributes: {
-          name: 'Max',
+          name: 'Kardtrick',
           accountuid: 'stuff',
           money: 123,
           damage: 'stuff',
@@ -29,7 +29,7 @@ export default function() {
       type: 'player',
       id: 3,
       attributes: {
-        name: 'Max',
+        name: 'Soxun',
         accountuid: 'stuff',
         money: 123,
         damage: 'stuff',
@@ -41,7 +41,7 @@ export default function() {
       type: 'player',
       id: 4,
       attributes: {
-        name: 'Max',
+        name: 'Other',
         accountuid: 'stuff',
         money: 123,
         damage: 'stuff',
@@ -53,7 +53,7 @@ export default function() {
       type: 'player',
       id: 5,
       attributes: {
-        name: 'Max',
+        name: 'Stuff',
         accountuid: 'stuff',
         money: 123,
         damage: 'stuff',
