@@ -6,20 +6,35 @@
 	{{#link-to 'index'}}
 	<h1>Arma 3 Server Manager </h1>
 	{{/link-to}}
-	<p>Tools</p>
-	<ul>
-		<li>{{#link-to 'players' class='button'}} Player Accounts - ban/kick/view their stats{{/link-to}}</li>
-		<li>Territories - View their stats/delete/View their VG</li>
-		<li>Stolen Territories - Restore flag</li>
-		<li>Trade Check - View player trade transactions</li>
-		<li>Waste Trade Check - View player trade transactions</li>
-		<li>View vehicles - View player owned vehicles and their status/restore them</li>
-		<li>Raid history - View raid history bomb planted, etc</li>
-		<li>Flag stolen history - View history of stolen flags/Restored at</li>
-	</ul>
-	{{#link-to 'about'}}
-	About us
-	{{/link-to}}
+	<nav class="nav nav-pills">
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Players{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Territories{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Stolen Territories{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Trade Check{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Waste Trade Check{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}View vehicles{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Raid history{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'players' class='nav-link'}}Flag stolen history{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'about' class='nav-link'}}About{{/link-to}}
+		</li>
+	</nav>
 
 </header>
 

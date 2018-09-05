@@ -222,4 +222,7 @@ export default function() {
       return { data: players };
     }
   });
+    this.del('/players/:id', function(db, request) {
+    //Emulates deletion of player!
+  });
 }

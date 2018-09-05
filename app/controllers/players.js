@@ -13,6 +13,6 @@ export default Controller.extend({
 			} else {
 				return this.store.findAll('player');
 			}
-		}
-	}
+		},
+	},
 });
